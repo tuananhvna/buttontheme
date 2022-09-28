@@ -1,20 +1,31 @@
-import React from 'react';
-import Header from './Header';
-
-export const buttonThemes = {
-  blue: {
-    color: 'white',
-    backgroundColor: 'blue'
-  },
-  black: {
-    color: 'white',
-    backgroundColor: 'black'
-  },
-};
+import React from "react";
+import Header from "./Header";
+import ThemeContext from "./ThemeContext";
 
 function App() {
+  const [buttonStyle, setButtonStyle] = React.useState({buttonStyle: {}});
+
+  React.useEffect(
+    () =>
+      setButtonStyle({
+        buttonStyle: {
+          blue: {
+            color: 'white',
+            backgroundColor: 'blue',
+          },
+          black: {
+            color: 'white',
+            backgroundColor: 'black',
+          }
+        }
+      }),
+    []
+  );
+  
   return (
-    <Header />
+    <ThemeContext.Provider value={buttonStyle}>
+      <Header />
+    </ThemeContext.Provider>
   );
 }
 

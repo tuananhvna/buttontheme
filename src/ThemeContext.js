@@ -1,5 +1,5 @@
 import React from 'react';
 
-const ThemeContext = React.createContext('blue');
+const ThemeContext = React.createContext({buttonStyle: {} });
 
 export default ThemeContext;
