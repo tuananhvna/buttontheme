@@ -6,7 +6,7 @@ function HeaderButton() {
 
   return (
     <div>
-      <button style={themeContext.buttonStyle.black}>Press me</button>
+      <button style={themeContext.buttonStyle.blue}>Press me</button>
     </div>
   );
 }
